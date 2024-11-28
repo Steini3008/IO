@@ -3,8 +3,12 @@ public class PrettyPrinter {
 	private String wrapperEnd;
 	
 	public PrettyPrinter() {
-		this.wrapperStart = "[";
-		this.wrapperEnd = "]";
+		this("[", "]");
+	}
+	
+	public PrettyPrinter(String wrapperStart, String wrapperEnd) {
+		this.wrapperStart = wrapperStart;
+		this.wrapperEnd = wrapperEnd;
 	}
 	
 	void print(String str) {
